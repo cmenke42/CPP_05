@@ -40,6 +40,10 @@ AForm::GradeTooLowException::GradeTooLowException(const std::string& message)
 {
 }
 
+/**
+ * @throws AForm::GradeTooHighException -> If the gradeToSign or gradeToExecute is less than 1.
+ * @throws AForm::GradeTooLowException -> If the gradeToSign or gradeToExecute is greater than 150.
+ */
 AForm::AForm(const std::string& name, int gradeToSign, int gradeToExecute)
 	: _name(name),
 	  _signed(false),
@@ -95,6 +99,10 @@ int AForm::getGradeToExecute() const
 	return (this->_gradeToExecute);
 }
 
+/**
+ * @throws AForm::GradeTooHighException -> If the gradeToSign or gradeToExecute is less than 1.
+ * @throws AForm::GradeTooLowException -> If the gradeToSign or gradeToExecute is greater than 150.
+ */
 void AForm::beSigned(const Bureaucrat& bureaucrat)
 {
 	if (this->_signed)
@@ -105,6 +113,10 @@ void AForm::beSigned(const Bureaucrat& bureaucrat)
 		throw AForm::GradeTooLowException(); 
 }
 
+/**
+ * @throws AForm::FormException -> If the form is not signed.
+ * @throws AForm::GradeTooLowException -> If the bureaucrat's grade is greater than the gradeToExecute.
+ */
 void AForm::execute(const Bureaucrat& executor) const
 {
 	if (!this->_signed)

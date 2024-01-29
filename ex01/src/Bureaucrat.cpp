@@ -14,6 +14,10 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 	return ("Grade too low");
 }
 
+/**
+ * @throws Bureaucrat::GradeTooHighException -> If the grade is less than 1.
+ * @throws Bureaucrat::GradeTooLowException -> If the grade is greater than 150.
+ */
 Bureaucrat::Bureaucrat(const std::string& name, int grade)
           : _name(name),
 		    _grade(grade)

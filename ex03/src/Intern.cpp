@@ -49,6 +49,9 @@ const Intern::_FormCreator	Intern::_formCreators[3] = {
 	&Intern::_makePresidentialPardonForm
 };
 
+/**
+** @throws Intern::FormNotFound -> If the formName is not exitent.
+*/
 AForm*	Intern::makeForm(const std::string& formName, const std::string& target) const
 {
 	for (int i = 0; i < 3; i++)
