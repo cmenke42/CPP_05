@@ -12,7 +12,7 @@ INCLUDES		:= -I ${INCLUDES_DIR}
 
 # All source files
 SRCS := \
-    main.cpp \
+  main.cpp \
 	Bureaucrat.cpp \
 	Form.cpp \
 
@@ -23,12 +23,11 @@ OBJS := $(patsubst %.cpp, ${OBJDIR}/%.o, ${SRCS})
 # Production flags
 CXXFLAGS := -Wall -Wextra -Werror
 CXXFLAGS += -std=c++98 -pedantic
+CXXFLAGS += -fsanitize=address
 # CXXFLAGS += -O2
 
 # Development flags
 CXXFLAGS += -g -O0
-# CXXFLAGS += -fsanitize=thread
-# CXXFLAGS += -fsanitize=address
 
 # Add includes
 CXXFLAGS += ${INCLUDES}

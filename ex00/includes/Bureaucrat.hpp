@@ -36,6 +36,6 @@ private:
 	int 							_grade;
 };
 
-std::ostream &operator<<(std::ostream &os, const Bureaucrat &obj);
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj);
 
 #endif /* BUREAUCRAT_HPP_INCLUDED */

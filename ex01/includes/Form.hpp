@@ -43,17 +43,17 @@ class Form
 		~Form();
 
 		const std::string&	getName() const;
-		bool				isSigned() const;
-		int 				getGradeToSign() const;
-		int 				getGradeToExecute() const;
+		bool								isSigned() const;
+		int 								getGradeToSign() const;
+		int 								getGradeToExecute() const;
 
-		void				beSigned(const Bureaucrat& bureaucrat);
+		void								beSigned(const Bureaucrat& bureaucrat);
 
 	private:
 		const std::string	_name;
-		bool				_signed;
-		const int			_gradeToSign;
-		const int			_gradeToExecute;
+		bool							_signed;
+		const int					_gradeToSign;
+		const int					_gradeToExecute;
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& obj);

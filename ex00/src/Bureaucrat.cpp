@@ -55,7 +55,6 @@ int Bureaucrat::getGrade() const
  * @brief 
  * 
  * @throws Bureaucrat::GrdeTooHighException -> if resulting grade is less than 1 OR input < 0.
- 
  */
 void Bureaucrat::incrementGrade(int number)
 {

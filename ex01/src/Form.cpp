@@ -100,7 +100,7 @@ int Form::getGradeToExecute() const
 }
 
 /**
- * @throws Form::GradeTooLowException -> If the bureaucrat's grade is greater than the gradeToSign.
+ * @throws Form::GradeTooLowException -> If the bureaucrat's grade is not high enough.
  */
 void Form::beSigned(const Bureaucrat& bureaucrat)
 {
