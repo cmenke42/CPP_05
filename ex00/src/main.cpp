@@ -4,12 +4,12 @@
 
 int main(void)
 {
-	Bureaucrat one("Blender", 23);
-	Bureaucrat two("Fender", 22);
+	Bureaucrat one("Bone", 23);
+	Bureaucrat two("Btwo", 22);
 
 	try 
 	{
-		Bureaucrat three("Fender", 0);
+		Bureaucrat three("Bthree", 0);
 	}
 	catch (const std::exception& e)
 	{
@@ -18,7 +18,7 @@ int main(void)
 
 	try
 	{
-		Bureaucrat four("Fender", 151);
+		Bureaucrat four("Bfour", 151);
 	}
 	catch (const std::exception& e)
 	{
@@ -83,4 +83,6 @@ int main(void)
 		std::cout << e.what() << std::endl;
 	}
 	std::cout << one << std::endl;
+
+	return (0);
 }

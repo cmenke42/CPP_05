@@ -37,13 +37,15 @@ Intern&	Intern::operator=(const Intern& other)
 
 Intern::~Intern() {}
 
-const std::string			Intern::_formNames[3] = {
+const std::string			Intern::_formNames[3] =
+{
 	"shrubbery creation",
 	"robotomy request",
 	"presidential pardon"
 };
 
-const Intern::_FormCreator	Intern::_formCreators[3] = {
+const Intern::_FormCreator	Intern::_formCreators[3] =
+{
 	&Intern::_makeShrubberyCreationForm,
 	&Intern::_makeRobotomyRequestForm,
 	&Intern::_makePresidentialPardonForm
@@ -60,7 +62,6 @@ AForm*	Intern::makeForm(const std::string& formName, const std::string& target) 
 			return ((this->*Intern::_formCreators[i])(target));
 	}
 	throw Intern::FormNotFound("Form: \"" + formName + "\" not found.");
-	return (NULL);
 }
 
 AForm*	Intern::_makeShrubberyCreationForm(const std::string& target) const

@@ -100,8 +100,8 @@ int AForm::getGradeToExecute() const
 }
 
 /**
- * @throws AForm::GradeTooHighException -> If the gradeToSign or gradeToExecute is less than 1.
- * @throws AForm::GradeTooLowException -> If the gradeToSign or gradeToExecute is greater than 150.
+ * @throws AForm::FormException -> If the form is already signed.
+ * @throws AForm::GradeTooLowException -> If the bureaucrat's grade is greater than the gradeToSign.
  */
 void AForm::beSigned(const Bureaucrat& bureaucrat)
 {

@@ -36,4 +36,5 @@ int main(void)
 
 	max.signForm(buyCar);
 	std::cout << std::endl;
+	return (0);
 }

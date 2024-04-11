@@ -88,7 +88,7 @@ void Bureaucrat::signForm(Form& form) const
 		std::cout << this->_name
 		 << " couldn't sign "
 		 << form.getName()
-		 << " because "
+		 << " because: "
 		 << e.what()
 		 << std::endl;
 		 return;

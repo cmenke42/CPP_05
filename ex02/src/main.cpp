@@ -31,12 +31,12 @@ int main(void)
 	std::cout << RED << president << RESET << std::endl;
 	std::cout << std::endl;
 
+	std::cout << std::endl;
 	max.executeForm(tree);
 	std::cout << std::endl;
 	max.executeForm(robot);
 	std::cout << std::endl;
 	max.executeForm(president);
-	std::cout << std::endl;
 	std::cout << std::endl;
 
 // ---------------------
