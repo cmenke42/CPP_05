@@ -32,4 +32,55 @@ int main(void)
 
 	std::cout << one << std::endl;
 	std::cout << two << std::endl;
+
+	std::cout << "\ntesting incrementGrade and decrementGrade." << std::endl;
+	std::cout << "Starting with: " << one << std::endl;
+	std::cout << std::endl;
+
+	try
+	{
+		std::cout << "Incrementing grade by 2." << std::endl;
+		one.incrementGrade(2);
+	}
+	catch (const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << one << std::endl;
+	std::cout << std::endl;
+
+	try
+	{
+		std::cout << "Incrementing grade by 150." << std::endl;
+		one.incrementGrade(150);
+	}
+	catch (const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << one << std::endl;
+	std::cout << std::endl;
+
+	try
+	{
+		std::cout << "Decrementing grade by 2." << std::endl;
+		one.decrementGrade(2);
+	}
+	catch (const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << one << std::endl;
+	std::cout << std::endl;
+
+	try
+	{
+		std::cout << "Decrementing grade by -2." << std::endl;
+		one.decrementGrade(-2);
+	}
+	catch (const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << one << std::endl;
 }
