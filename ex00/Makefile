@@ -27,7 +27,6 @@ CXXFLAGS += -fsanitize=address
 
 # Development flags
 CXXFLAGS += -g -O0
-CXXFLAGS += -fsanitize=address
 
 # Add includes
 CXXFLAGS += ${INCLUDES}
